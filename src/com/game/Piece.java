@@ -12,6 +12,7 @@ public class Piece {
     public Game.Color color;
     public Name name;
     public int[] position;
+    protected boolean wasMove = false;
 
     public ArrayList<Cell> moves(Cell[][] boardState) {
         return null;
