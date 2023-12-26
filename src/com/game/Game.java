@@ -1,7 +1,5 @@
 package com.game;
 
-import com.game.pieces.Rook;
-
 import java.util.ArrayList;
 
 public class Game {
@@ -11,11 +9,12 @@ public class Game {
 
     public Game() {
         Table table = new Table();
+        table.pieceInitialize();
 
         table.showTable();
 
         //TEST
-        ArrayList<Cell> moves = table.cells[1][0].takenBy.moves(table.cells);
+        ArrayList<Cell> moves = table.cells[4][0].takenBy.moves(table.cells);
         for (Cell move : moves) {
             System.out.print(move.name + " ");
         }
